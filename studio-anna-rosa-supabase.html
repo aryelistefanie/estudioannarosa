@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Studio Anna Rosa — Beleza e Autocuidado</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#8B1A47;--rose:#D9648F;--pink:#F4A6C3;--cream:#F7DCC4;--copper:#B8743A;--bg:#FDEFF3;--card:#FFF6F8;--ink:#5a1230;--line:#f0b9cc;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a0f1c;--card:#3a1727;--ink:#fbe3ec;--line:#6b2b45;--wine:#e88bb0}}
+:root[data-theme="dark"]{--bg:#2a0f1c;--card:#3a1727;--ink:#fbe3ec;--line:#6b2b45;--wine:#e88bb0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Montserrat,system-ui,sans-serif;background-image:radial-gradient(circle at 10% 0,var(--pink) 0,transparent 35%),radial-gradient(circle at 100% 20%,var(--cream) 0,transparent 30%)}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px 60px}
+header{text-align:center;padding:24px 0 8px}
+.eyebrow{letter-spacing:.5em;font-size:13px;color:var(--wine)}
+h1{font:600 clamp(40px,12vw,68px)/1 "Cormorant Garamond",Georgia,serif;margin:4px 0;color:var(--wine)}
+.sub{letter-spacing:.3em;font-size:12px;border-top:1px solid var(--copper);border-bottom:1px solid var(--copper);display:inline-block;padding:6px 14px}
+.script{font-family:"Great Vibes",cursive;font-size:28px;color:var(--wine);margin:14px 0 0}
+.card{background:var(--card);border:1px solid var(--copper);border-radius:22px;padding:18px;margin:26px 0;position:relative;box-shadow:0 6px 20px #8b1a4722}
+.tag{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:linear-gradient(#e0719b,var(--wine));color:#fff;padding:6px 22px;border-radius:20px;letter-spacing:.18em;font-size:14px;white-space:nowrap}
+.svc{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.svc:last-child{border:0}.svc span.n{flex:1;text-transform:uppercase;letter-spacing:.04em}
+.price{background:var(--pink);color:#5a1230;font-weight:600;padding:4px 12px;border-radius:14px;white-space:nowrap}
+input[type=checkbox],input[type=radio]{accent-color:var(--wine);width:18px;height:18px}
+label.f{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:14px 0 4px}
+input[type=text],input[type=tel],input[type=date],input[type=time],input[type=number]{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+.btn{background:var(--wine);color:#fff;border:0;border-radius:24px;padding:13px 22px;font:600 14px Montserrat,sans-serif;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;width:100%;margin-top:18px}
+.btn.s{width:auto;padding:8px 14px;margin:0;font-size:11px}.btn.o{background:transparent;color:var(--wine);border:1px solid var(--wine)}
+.slots{display:flex;flex-wrap:wrap;gap:8px}
+.slot{padding:8px 14px;border:1px solid var(--copper);border-radius:16px;background:transparent;color:var(--ink);cursor:pointer;font:inherit}
+.slot.on{background:var(--copper);color:#fff}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pay label{border:1px solid var(--line);border-radius:12px;padding:10px;display:flex;gap:8px;align-items:center;cursor:pointer}
+.total{display:flex;justify-content:space-between;margin-top:14px;font-weight:600;font-size:17px}
+.note{font-size:12px;opacity:.75}.ok{text-align:center;padding:10px}.ok h2{font-family:"Cormorant Garamond",serif;color:var(--wine);font-size:32px;margin:0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.hide{display:none}h3{font:600 24px "Cormorant Garamond",serif;color:var(--wine);margin:6px 0}
+.grid3{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+select{width:100%;padding:11px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.tabs button{flex:1;min-width:90px;padding:10px 8px;border-radius:16px;border:1px solid var(--wine);background:var(--card);color:var(--wine);font:600 12px Montserrat,sans-serif;cursor:pointer}
+
+select,input[type=password],input[type=email]{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.tabs button{flex:1;min-width:92px;padding:10px 8px;border-radius:16px;border:1px solid var(--wine);background:var(--card);color:var(--wine);font:600 12px Montserrat,sans-serif;cursor:pointer}
+.grid3{display:grid;grid-template-columns:1fr 1fr;gap:10px}.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+</style></head><body><div class="wrap">
+<header><div class="eyebrow">STUDIO</div><h1>ANNA ROSA</h1><div class="sub">BELEZA E AUTOCUIDADO</div><div class="script">Realce sua beleza com quem entende!</div></header>
+
+<main id="pub">
+<section class="card"><span class="tag">TABELA DE VALORES</span><div id="svcs" style="margin-top:14px"></div>
+<div class="note" style="margin-top:8px">Marque os procedimentos que deseja e agende logo abaixo. Atendimento no Condomínio Queluz.</div></section>
+
+<section class="card" id="bk"><span class="tag">AGENDE SEU HORÁRIO</span>
+<div id="form" style="margin-top:10px">
+<div class="total"><span>Total</span><span id="tot">R$ 0,00</span></div>
+<label class="f">Data</label><input type="date" id="date">
+<label class="f">Horário</label>
+<div id="slots" class="slots"></div>
+<div id="free" class="hide"><input type="time" id="ftime"><div class="note">Sugira um horário; a profissional confirmará pelo WhatsApp.</div></div>
+<label class="f">Seu nome</label><input type="text" id="nome" autocomplete="name">
+<label class="f">Celular (WhatsApp)</label><input type="tel" id="cel" placeholder="(21) 90000-0000" autocomplete="tel">
+<label class="f">Forma de pagamento</label>
+<div class="pay"><label><input type="radio" name="pg" value="Dinheiro">Dinheiro</label><label><input type="radio" name="pg" value="Pix">Pix</label><label><input type="radio" name="pg" value="Cartão de crédito">Crédito</label><label><input type="radio" name="pg" value="Cartão de débito">Débito</label></div>
+<div id="err" class="note" style="color:#c0264f;margin-top:10px"></div>
+<button class="btn" id="go">Confirmar agendamento</button></div>
+<div id="done" class="ok hide"><h2>Agendamento enviado! 💗</h2><p id="donemsg"></p><a id="wa" class="btn" style="display:block;text-decoration:none;text-align:center" target="_blank" rel="noopener">Confirmar pelo WhatsApp</a></div>
+</section></main>
+
+<main id="adm" class="hide">
+<div class="card" id="login"><span class="tag">ENTRAR</span>
+<label class="f" style="margin-top:12px">E-mail</label><input type="email" id="le" autocomplete="username"><label class="f">Senha</label><input type="password" id="lp" autocomplete="current-password">
+<div id="lerr" class="note" style="color:#c0264f;margin-top:8px"></div><button class="btn" id="lgo">Entrar</button></div>
+<div id="panel" class="hide"><div class="tabs" id="tabs"><button data-k="hor">Horários</button><button data-k="agd">Agendamentos</button><button data-k="cli">Clientes</button><button data-k="pro">Procedimentos</button><button data-k="fat">Faturamento</button><button data-k="cfg">WhatsApp</button><button id="out">Sair</button></div>
+<div class="card" data-t="hor"><span class="tag">HORÁRIOS</span><label class="f" style="margin-top:12px">Data</label><input type="date" id="ad">
+<div class="grid3"><div><label class="f">Início</label><input type="time" id="as" value="09:00"></div><div><label class="f">Fim</label><input type="time" id="ae" value="17:00"></div></div>
+<label class="f">Intervalo (minutos)</label><input type="number" id="ai" value="60" min="15" step="15"><button class="btn" id="addslots">Adicionar horários</button><h3 style="font:600 24px 'Cormorant Garamond',serif;color:var(--wine)">Próximos horários</h3><div id="slist"></div></div>
+<div class="card" data-t="agd"><span class="tag">AGENDAMENTOS</span><div id="blist" style="margin-top:12px"></div></div>
+<div class="card" data-t="cli"><span class="tag">REGISTRAR ATENDIMENTO</span>
+<label class="f" style="margin-top:12px">Celular</label><input type="tel" id="vc"><label class="f">Nome</label><input type="text" id="vn">
+<label class="f">Procedimentos</label><div id="vs"></div><label class="f">Valor (R$)</label><input type="number" id="vv" step="0.01">
+<label class="f">Pagamento</label><select id="vp"><option>Dinheiro</option><option>Pix</option><option>Cartão de crédito</option><option>Cartão de débito</option></select>
+<label class="f">Data</label><input type="date" id="vd"><button class="btn" id="vsave">Salvar atendimento</button></div>
+<div class="card" data-t="cli"><span class="tag">MINHAS CLIENTES</span><div id="cl" style="margin-top:12px"></div></div>
+<div class="card" data-t="pro"><span class="tag">PROCEDIMENTOS</span><div id="pl" style="margin-top:12px"></div><label class="f">Novo procedimento</label><input type="text" id="pn" placeholder="Nome"><label class="f">Valor (R$)</label><input type="number" id="pv" step="0.01"><button class="btn" id="padd">Adicionar</button></div>
+<div class="card" data-t="fat"><span class="tag">FATURAMENTO</span><div id="fl" style="margin-top:12px"></div></div>
+<div class="card" data-t="cfg"><span class="tag">WHATSAPP</span><label class="f" style="margin-top:12px">Número que recebe os agendamentos</label><input type="tel" id="wn" placeholder="(21) 90000-0000"><div class="note">Com DDD.</div><button class="btn" id="wsave">Salvar</button><div id="wmsg" class="note"></div></div>
+</div>
+<p style="text-align:center"><a href="#" style="color:var(--wine)">← Voltar ao site</a></p>
+</main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+const SB_URL="https://zlbjdnlqsmmcbrhsknwt.supabase.co";
+const SB_KEY="COLE_AQUI_A_CHAVE_ANON_PUBLIC"; // Project Settings > API > anon public
+const sb=supabase.createClient(SB_URL,SB_KEY);
+const $=i=>document.getElementById(i),brl=v=>"R$ "+Number(v).toFixed(2).replace(".",","),fd=d=>d.split("-").reverse().join("/"),dg=s=>s.replace(/\D/g,"");
+const el=(t,x,c)=>{const e=document.createElement(t);if(x!=null)e.textContent=x;if(c)e.className=c;return e};
+const btn=(t,f)=>{const b=el("button",t,"btn s o");b.onclick=f;return b};
+const today=new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+let SV=[],WHATS="",sel=null,tabCur="hor",V=[];
+$("date").min=today;$("vd").value=today;
+function item(s,box,i){const l=el("label",null,"svc"),c=document.createElement("input");c.type="checkbox";c.dataset.i=i;l.append(c,el("span",s.name,"n"),el("span",brl(s.price),"price"));box.appendChild(l);return c}
+function fill(box){const on=new Set([...box.querySelectorAll("input:checked")].map(c=>SV[c.dataset.i]?.name));box.innerHTML="";SV.forEach((s,i)=>{item(s,box,i).checked=on.has(s.name)})}
+const picked=box=>[...box.querySelectorAll("input:checked")].map(c=>SV[c.dataset.i]);
+const sumOf=box=>picked(box).reduce((a,s)=>a+Number(s.price),0);
+$("svcs").onchange=()=>{$("tot").textContent=brl(sumOf($("svcs")))};
+async function loadPub(){
+ const [s,c]=await Promise.all([sb.from("services").select("*").eq("active",true).order("sort_order").order("created_at"),sb.from("settings").select("whatsapp").eq("id",1).maybeSingle()]);
+ SV=s.data||[];WHATS=(c.data&&c.data.whatsapp)||"";fill($("svcs"));fill($("vs"));$("svcs").onchange();
+ if(s.error)$("err").textContent="Não foi possível carregar os procedimentos.";
+}
+$("date").onchange=async()=>{
+ sel=null;const box=$("slots");box.innerHTML="";const d=$("date").value;if(!d)return;
+ const {data}=await sb.from("slots").select("id,slot_time").eq("slot_date",d).eq("is_booked",false).order("slot_time");
+ if(!data||!data.length){box.appendChild(el("span","Sem horários livres nesta data.","note"));return}
+ data.forEach(s=>{const b=el("button",s.slot_time.slice(0,5),"slot");b.type="button";b.onclick=()=>{sel=s;box.querySelectorAll(".slot").forEach(x=>x.classList.remove("on"));b.classList.add("on")};box.appendChild(b)});
+};
+$("go").onclick=async()=>{
+ const sv=picked($("svcs")),nome=$("nome").value.trim(),cel=$("cel").value.trim(),pg=(document.querySelector("input[name=pg]:checked")||{}).value,date=$("date").value;
+ const e=!sv.length?"Escolha ao menos um procedimento.":!date?"Escolha a data.":!sel?"Escolha o horário.":nome.length<2?"Informe seu nome.":dg(cel).length<10?"Informe um celular válido.":!pg?"Escolha a forma de pagamento.":"";
+ $("err").textContent=e;if(e)return;
+ $("go").disabled=true;
+ const {error}=await sb.rpc("book_slot",{p_slot_id:sel.id,p_name:nome,p_phone:cel,p_payment:pg,p_services:sv.map(s=>s.name)});
+ $("go").disabled=false;
+ if(error){$("err").textContent="Este horário não está mais disponível. Escolha outro.";$("date").onchange();return}
+ const total=sv.reduce((a,s)=>a+Number(s.price),0),names=sv.map(s=>s.name).join(", "),time=sel.slot_time.slice(0,5);
+ const msg="Olá! Agendamento Studio Anna Rosa 💗%0AProcedimentos: "+encodeURIComponent(names)+"%0AData: "+fd(date)+" às "+time+"%0ATotal: "+encodeURIComponent(brl(total))+"%0APagamento: "+encodeURIComponent(pg)+"%0ANome: "+encodeURIComponent(nome)+"%0ACelular: "+encodeURIComponent(cel);
+ $("wa").href="https://wa.me/"+WHATS+"?text="+msg;$("wa").style.display=WHATS?"block":"none";
+ $("donemsg").textContent="Horário reservado: "+fd(date)+" às "+time+" — "+brl(total)+(WHATS?". Toque abaixo para avisar a profissional.":". A profissional entrará em contato.");
+ $("form").classList.add("hide");$("done").classList.remove("hide");
+};
+/* ===== ADMIN ===== */
+function route(){const a=location.hash==="#admin";$("pub").classList.toggle("hide",a);$("adm").classList.toggle("hide",!a);if(a)adminInit()}
+async function adminInit(){
+ const {data:{session}}=await sb.auth.getSession();
+ let ok=false;if(session){const r=await sb.from("admins").select("user_id").maybeSingle();ok=!!r.data;if(!ok)await sb.auth.signOut()}
+ $("login").classList.toggle("hide",ok);$("panel").classList.toggle("hide",!ok);
+ if(ok){tab(tabCur);loadAdmin()}
+}
+$("lgo").onclick=async()=>{const {error}=await sb.auth.signInWithPassword({email:$("le").value.trim(),password:$("lp").value});$("lerr").textContent=error?"E-mail ou senha incorretos.":"";if(!error){await adminInit();if($("panel").classList.contains("hide"))$("lerr").textContent="Esta conta não tem permissão de administradora."}};
+$("out").onclick=async()=>{await sb.auth.signOut();adminInit()};
+function tab(t){tabCur=t;document.querySelectorAll("[data-t]").forEach(e=>e.classList.toggle("hide",e.dataset.t!==t));document.querySelectorAll("#tabs button[data-k]").forEach(b=>b.style.opacity=b.dataset.k===t?1:.55)}
+document.querySelectorAll("#tabs button[data-k]").forEach(b=>b.onclick=()=>tab(b.dataset.k));
+async function loadAdmin(){
+ const [sl,bk,cl,vi,sv,st]=await Promise.all([
+  sb.from("slots").select("*").gte("slot_date",today).order("slot_date").order("slot_time"),
+  sb.from("bookings").select("*,slots(slot_date,slot_time)").order("created_at",{ascending:false}).limit(60),
+  sb.from("client_summary").select("*").order("total_spent",{ascending:false}),
+  sb.from("visits").select("*,clients(name)").order("visit_date"),
+  sb.from("services").select("*").eq("active",true).order("sort_order").order("created_at"),
+  sb.from("settings").select("whatsapp").eq("id",1).maybeSingle()]);
+ SV=sv.data||[];V=vi.data||[];WHATS=(st.data&&st.data.whatsapp)||"";
+ fill($("svcs"));fill($("vs"));if(document.activeElement!==$("wn"))$("wn").value=WHATS;
+ rSlots(sl.data||[]);rBook(bk.data||[]);rCli(cl.data||[]);rPro();rFat();
+}
+const list=(id,rows,empty)=>{const b=$(id);b.innerHTML="";if(!rows.length)b.appendChild(el("span",empty,"note"));rows.forEach(r=>b.appendChild(r))};
+const row=(txt,...bs)=>{const r=el("div",null,"row");r.append(el("span",txt),...bs);return r};
+function rSlots(d){list("slist",d.map(s=>row(fd(s.slot_date)+" "+s.slot_time.slice(0,5)+(s.is_booked?" · reservado":" · livre"),...(s.is_booked?[]:[btn("Remover",async()=>{await sb.from("slots").delete().eq("id",s.id);loadAdmin()})]))),"Nenhum horário futuro cadastrado.")}
+$("addslots").onclick=async()=>{
+ const d=$("ad").value,[h1,m1]=$("as").value.split(":").map(Number),[h2,m2]=$("ae").value.split(":").map(Number),iv=+$("ai").value;if(!d||!iv||isNaN(h1)||isNaN(h2))return;
+ const rows=[];for(let t=h1*60+m1;t<=h2*60+m2;t+=iv)rows.push({slot_date:d,slot_time:String(Math.floor(t/60)).padStart(2,"0")+":"+String(t%60).padStart(2,"0")});
+ await sb.from("slots").upsert(rows,{onConflict:"slot_date,slot_time",ignoreDuplicates:true});loadAdmin()};
+const setSt=async(b,st)=>{await sb.from("bookings").update({status:st}).eq("id",b.id);loadAdmin()};
+async function conclude(b){
+ await sb.from("clients").upsert({phone:b.client_phone,name:b.client_name});
+ await sb.from("visits").insert({client_phone:b.client_phone,visit_date:b.slots?b.slots.slot_date:today,services:b.services,amount:b.total,payment_method:b.payment_method});
+ await setSt(b,"concluido")}
+function rBook(d){list("blist",d.map(b=>{const w=b.slots?fd(b.slots.slot_date)+" "+b.slots.slot_time.slice(0,5):"";const bs=[];
+ if(b.status==="pendente")bs.push(btn("Confirmar",()=>setSt(b,"confirmado")));
+ if(b.status==="pendente"||b.status==="confirmado")bs.push(btn("Concluir",()=>conclude(b)),btn("Cancelar",()=>confirm("Cancelar e liberar o horário?")&&setSt(b,"cancelado")));
+ return row(w+" · "+b.client_name+" · "+b.client_phone+" · "+b.services.join(", ")+" · "+brl(b.total)+" · "+b.payment_method+" · "+b.status.toUpperCase(),...bs)}),"Nenhum agendamento ainda.")}
+function rCli(d){list("cl",d.map(c=>{const r=el("div",null,"row"),t=el("div");t.style.flex="1";t.append(el("b",c.name+" · "+c.phone),el("div",(c.services_done||[]).join(", ")+" · "+c.visits+" atendimento(s)","note"));r.append(t,el("b",brl(c.total_spent)));return r}),"Nenhuma cliente registrada ainda.")}
+$("vs").onchange=()=>{$("vv").value=sumOf($("vs"))||""};
+$("vc").oninput=async()=>{const p=dg($("vc").value);if(p.length>=10&&!$("vn").value){const {data}=await sb.from("clients").select("name").eq("phone",p).maybeSingle();if(data)$("vn").value=data.name}};
+$("vsave").onclick=async()=>{const c=dg($("vc").value),n=$("vn").value.trim(),ps=picked($("vs")),v=+$("vv").value;if(c.length<10||!n||!ps.length||!(v>0)){alert("Preencha celular, nome, procedimentos e valor.");return}
+ await sb.from("clients").upsert({phone:c,name:n});
+ const {error}=await sb.from("visits").insert({client_phone:c,visit_date:$("vd").value||today,services:ps.map(s=>s.name),amount:v,payment_method:$("vp").value});
+ if(error){alert("Erro ao salvar.");return}
+ $("vv").value=$("vc").value=$("vn").value="";$("vs").querySelectorAll("input").forEach(x=>x.checked=false);loadAdmin()};
+function rPro(){list("pl",SV.map(s=>{const i=el("input");i.type="number";i.step="0.01";i.value=s.price;i.style.width="100px";return row(s.name,i,btn("Salvar",async()=>{await sb.from("services").update({price:+i.value}).eq("id",s.id);loadAdmin()}),btn("Remover",async()=>{if(confirm("Remover do site?")){await sb.from("services").update({active:false}).eq("id",s.id);loadAdmin()}}))}),"Nenhum procedimento.")}
+$("padd").onclick=async()=>{const n=$("pn").value.trim(),v=+$("pv").value;if(!n||!(v>=0))return;await sb.from("services").upsert({name:n,price:v,active:true,sort_order:Date.now()%1e9},{onConflict:"name"});$("pn").value=$("pv").value="";loadAdmin()};
+$("wsave").onclick=async()=>{let d=dg($("wn").value);if(d.length<10){$("wmsg").textContent="Número inválido.";return}if(d.length<=11)d="55"+d;const {error}=await sb.from("settings").update({whatsapp:d}).eq("id",1);$("wmsg").textContent=error?"Erro ao salvar.":"Salvo!"};
+function rFat(){const f=$("fl");f.innerHTML="";const m=today.slice(0,7),sum=fn=>V.filter(fn).reduce((a,v)=>a+Number(v.amount),0),all=sum(()=>true);
+ const line=(a,b)=>row(a,el("b",b)),h=t=>el("h3",t),grp=(kf,vf)=>{const o={};V.forEach(v=>[].concat(kf(v)).forEach(k=>o[k]=(o[k]||0)+vf(v)));return Object.entries(o)};
+ f.append(h("Resumo"),line("Hoje",brl(sum(v=>v.visit_date===today))),line("Este mês",brl(sum(v=>v.visit_date.slice(0,7)===m))),line("Total geral",brl(all)),line("Atendimentos",String(V.length)),line("Ticket médio",brl(V.length?all/V.length:0)),
+ h("Por mês"),...grp(v=>v.visit_date.slice(0,7),v=>+v.amount).sort().reverse().map(([k,v])=>line(k.split("-").reverse().join("/"),brl(v))),
+ h("Por forma de pagamento"),...grp(v=>v.payment_method,v=>+v.amount).map(([k,v])=>line(k,brl(v))),
+ h("Procedimentos mais feitos"),...grp(v=>v.services,()=>1).sort((a,b)=>b[1]-a[1]).map(([k,v])=>line(k,v+"×")))}
+window.addEventListener("hashchange",route);route();loadPub();
+</script></body></html>
