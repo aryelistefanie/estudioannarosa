@@ -89,7 +89,7 @@ select,input[type=password],input[type=email]{width:100%;padding:11px 12px;borde
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script>
 const SB_URL="https://zlbjdnlqsmmcbrhsknwt.supabase.co";
-const SB_KEY="COLE_AQUI_A_CHAVE_ANON_PUBLIC"; // Project Settings > API > anon public
+const SB_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpsYmpkbmxxc21tY2JyaHNrbnd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM3NDc0NjksImV4cCI6MjEwOTMyMzQ2OX0.n2Q8agvb7VgYT60NZA-jLYzk96HBuC6FlJRpqQvkCFc"; // Project Settings > API > anon public
 const keep=()=>{try{return localStorage.getItem("ar_keep")!=="0"}catch(e){return true}};
 const store={getItem:k=>localStorage.getItem(k)??sessionStorage.getItem(k),setItem:(k,v)=>{(keep()?localStorage:sessionStorage).setItem(k,v);(keep()?sessionStorage:localStorage).removeItem(k)},removeItem:k=>{localStorage.removeItem(k);sessionStorage.removeItem(k)}};
 const sb=supabase.createClient(SB_URL,SB_KEY,{auth:{storage:store,persistSession:true,autoRefreshToken:true}});
