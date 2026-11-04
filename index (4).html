@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Studio Anna Rosa — Beleza e Autocuidado</title>
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--wine:#8B1A47;--rose:#D9648F;--pink:#F4A6C3;--cream:#F7DCC4;--copper:#B8743A;--bg:#FDEFF3;--card:#FFF6F8;--ink:#5a1230;--line:#f0b9cc;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Montserrat,system-ui,sans-serif;background-image:radial-gradient(circle at 10% 0,var(--pink) 0,transparent 35%),radial-gradient(circle at 100% 20%,var(--cream) 0,transparent 30%)}
+.wrap{max-width:1100px;margin:0 auto;padding:20px 16px 60px}
+header{text-align:center;padding:24px 0 8px}
+.eyebrow{letter-spacing:.5em;font-size:13px;color:var(--wine)}
+h1{font:600 clamp(40px,12vw,68px)/1 "Cormorant Garamond",Georgia,serif;margin:4px 0;color:var(--wine)}
+.sub{letter-spacing:.3em;font-size:12px;border-top:1px solid var(--copper);border-bottom:1px solid var(--copper);display:inline-block;padding:6px 14px}
+.script{font-family:"Great Vibes",cursive;font-size:28px;color:var(--wine);margin:14px 0 0}
+.card{background:var(--card);border:1px solid var(--copper);border-radius:22px;padding:18px;margin:26px 0;position:relative;box-shadow:0 6px 20px #8b1a4722}
+.tag{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:linear-gradient(#e0719b,var(--wine));color:#fff;padding:6px 22px;border-radius:20px;letter-spacing:.18em;font-size:14px;white-space:nowrap}
+.svc{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.svc:last-child{border:0}.svc span.n{flex:1;text-transform:uppercase;letter-spacing:.04em}
+.price{background:var(--pink);color:#5a1230;font-weight:600;padding:4px 12px;border-radius:14px;white-space:nowrap}
+input[type=checkbox],input[type=radio]{accent-color:var(--wine);width:18px;height:18px}
+label.f{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:14px 0 4px}
+input[type=text],input[type=tel],input[type=date],input[type=time],input[type=number]{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+.btn{background:var(--wine);color:#fff;border:0;border-radius:24px;padding:13px 22px;font:600 14px Montserrat,sans-serif;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;width:100%;margin-top:18px}
+.btn.s{width:auto;padding:8px 14px;margin:0;font-size:11px}.btn.o{background:transparent;color:var(--wine);border:1px solid var(--wine)}
+.slots{display:flex;flex-wrap:wrap;gap:8px}
+.slot{padding:8px 14px;border:1px solid var(--copper);border-radius:16px;background:transparent;color:var(--ink);cursor:pointer;font:inherit}
+.slot.on{background:var(--copper);color:#fff}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pay label{border:1px solid var(--line);border-radius:12px;padding:10px;display:flex;gap:8px;align-items:center;cursor:pointer}
+.total{display:flex;justify-content:space-between;margin-top:14px;font-weight:600;font-size:17px}
+.note{font-size:12px;opacity:.75}.ok{text-align:center;padding:10px}.ok h2{font-family:"Cormorant Garamond",serif;color:var(--wine);font-size:32px;margin:0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.hide{display:none}h3{font:600 24px "Cormorant Garamond",serif;color:var(--wine);margin:6px 0}
+.grid3{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+select{width:100%;padding:11px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.tabs button{flex:1;min-width:90px;padding:10px 8px;border-radius:16px;border:1px solid var(--wine);background:var(--card);color:var(--wine);font:600 12px Montserrat,sans-serif;cursor:pointer}
+
+select,input[type=password],input[type=email]{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.tabs button{flex:1;min-width:92px;padding:10px 8px;border-radius:16px;border:1px solid var(--wine);background:var(--card);color:var(--wine);font:600 12px Montserrat,sans-serif;cursor:pointer}
+.grid3{display:grid;grid-template-columns:1fr 1fr;gap:10px}.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+
+textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;resize:vertical}
+.top{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);padding:10px 14px}
+.top .in{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:10px}
+.logo{font:600 24px "Cormorant Garamond",Georgia,serif;color:var(--wine);text-decoration:none;white-space:nowrap}
+.search{flex:1;min-width:0;position:relative;color:var(--wine)}.search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%)}.search input{padding-left:40px;border-radius:24px}
+.wab{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#25D366;color:#fff;flex:none}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.sc{background:var(--bg);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}.sc.on{border:2px solid var(--wine);box-shadow:0 6px 18px #8b1a4733}
+.gw{position:relative}.gal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;background:var(--pink);aspect-ratio:4/3;scrollbar-width:none}.gal::-webkit-scrollbar{display:none}
+.gal img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:center}.ph{flex:0 0 100%;display:grid;place-items:center;font-size:48px}
+.ar{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;border:0;background:#ffffffcc;color:var(--wine);cursor:pointer;font-size:18px;line-height:1}
+.sb{padding:12px 14px;display:flex;flex-direction:column;gap:8px;flex:1}.sb h4{margin:0;font:600 22px "Cormorant Garamond",Georgia,serif;color:var(--wine)}
+.meta{display:flex;justify-content:space-between;align-items:center}.dur{font-size:12px}
+.booking{display:grid;grid-template-columns:1fr;gap:0 28px}@media(min-width:800px){.booking{grid-template-columns:1fr 1fr}}
+.ed{border:1px solid var(--line);border-radius:16px;padding:12px;margin-bottom:14px}.thumbs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.thumbs div{position:relative}
+.thumbs img{width:72px;height:72px;object-fit:cover;border-radius:10px}.thumbs button{position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;border:0;background:var(--wine);color:#fff;cursor:pointer}
+header{padding:16px 0 0}.eyebrow{margin:0}h1{font-size:clamp(38px,9vw,64px)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.two .total{flex-direction:column;gap:0;font-size:17px}.two .total span:first-child{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+@media(max-width:700px){
+.wrap{padding:10px 10px 50px}.card{padding:14px 12px}
+#sgrid{grid-template-columns:1fr 1fr;gap:10px}#sgrid .gal{aspect-ratio:1/1}
+#sgrid .sb{padding:8px 10px;gap:6px}#sgrid .sb h4{font-size:18px;line-height:1.1}
+#sgrid .sb .note{font-size:11px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+#sgrid .meta{flex-wrap:wrap;gap:4px}#sgrid .price{font-size:13px;padding:3px 9px}#sgrid .btn.s{width:100%;padding:9px 4px;font-size:10px;letter-spacing:.08em}
+.pay{grid-template-columns:repeat(4,1fr);gap:6px}.pay label{flex-direction:column;padding:8px 2px;font-size:12px;text-align:center;gap:4px}
+label.f{margin:10px 0 3px}}
+</style></head><body>
+<div class="top"><div class="in"><a class="logo" href="#">Anna Rosa</a><div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.500-4.500"/></svg><input type="text" id="q" placeholder="Buscar procedimento..." aria-label="Buscar"></div><a id="wab" class="wab hide" target="_blank" rel="noopener" aria-label="Tirar dúvidas pelo WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.200 8.200 0 1 1 12 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.200-.3.200-.5.100-1.500-.7-2.500-1.300-3.500-2.900-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.6.6-.9 1.300-.9 2.100.1 1 .5 1.900 1.100 2.700 1.200 1.700 2.700 3 4.600 3.700 1.700.6 2.400.5 3.100.4.700-.1 1.700-.7 1.900-1.400.2-.7.2-1.200.2-1.400z"/></svg></a></div></div>
+<div class="wrap">
+<header style="text-align:center"><div class="eyebrow">STUDIO</div><h1>ANNA ROSA</h1><div class="sub">BELEZA E AUTOCUIDADO</div><div class="script">Realce sua beleza com quem entende!</div></header>
+<main id="pub">
+<section class="card"><span class="tag">PROCEDIMENTOS</span><div id="sgrid" class="sgrid" style="margin-top:20px"></div><div id="nores" class="note hide" style="margin-top:14px">Nenhum procedimento encontrado.</div></section>
+<section class="card"><span class="tag">AGENDE SEU HORÁRIO</span>
+<div id="form" class="booking" style="margin-top:10px"><div>
+<div id="sum" class="note" style="margin-top:6px">Escolha os procedimentos acima.</div>
+<div class="two"><div class="total"><span>Duração</span><span id="dur">0 min</span></div><div class="total"><span>Total</span><span id="tot">R$ 0,00</span></div></div>
+<label class="f">Data</label><input type="date" id="date"><label class="f">Horários disponíveis</label><div id="slots" class="slots"></div></div>
+<div><div class="two"><div><label class="f">Seu nome</label><input type="text" id="nome" autocomplete="name"></div><div><label class="f">Celular (WhatsApp)</label><input type="tel" id="cel" placeholder="(21) 90000-0000" autocomplete="tel"></div></div>
+<label class="f">Forma de pagamento</label><div class="pay"><label><input type="radio" name="pg" value="Dinheiro">Dinheiro</label><label><input type="radio" name="pg" value="Pix">Pix</label><label><input type="radio" name="pg" value="Cartão de crédito">Crédito</label><label><input type="radio" name="pg" value="Cartão de débito">Débito</label></div>
+<div id="err" class="note" style="color:#c0264f;margin-top:10px"></div><button class="btn" id="go">Confirmar agendamento</button></div></div>
+<div id="done" class="ok hide"><h2>Agendamento enviado! 💗</h2><p id="donemsg"></p><a id="wa" class="btn" style="display:block;text-decoration:none;text-align:center;max-width:420px;margin:18px auto 0" target="_blank" rel="noopener">Avisar pelo WhatsApp</a></div></section>
+</main>
+<main id="adm" class="hide">
+<div class="card" id="login" style="max-width:480px;margin:26px auto"><span class="tag">ENTRAR</span>
+<label class="f" style="margin-top:12px">E-mail</label><input type="email" id="le" autocomplete="username"><label class="f">Senha</label><div style="position:relative"><input type="password" id="lp" autocomplete="current-password" style="padding-right:46px"><button type="button" id="eye" aria-label="Mostrar senha" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--wine);cursor:pointer;padding:6px;line-height:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+<label class="svc" style="border:0;margin-top:8px"><input type="checkbox" id="lk" checked><span class="n" style="text-transform:none;letter-spacing:0">Lembrar meu e-mail e manter conectada</span></label>
+<div id="lerr" class="note" style="color:#c0264f;margin-top:8px"></div><button class="btn" id="lgo">Entrar</button></div>
+<div id="panel" class="hide"><div class="tabs" id="tabs"><button data-k="hor">Horários</button><button data-k="agd">Agendamentos</button><button data-k="cli">Clientes</button><button data-k="pro">Procedimentos</button><button data-k="fat">Faturamento</button><button data-k="cfg">WhatsApp</button><button id="out">Sair</button></div>
+<div class="card" data-t="hor"><span class="tag">HORÁRIOS DE ATENDIMENTO</span><div class="note" style="margin-top:12px">Defina a janela do dia (ex.: 09:00 às 15:00). O site encaixa os agendamentos conforme a duração de cada procedimento.</div><label class="f">Data</label><input type="date" id="ad">
+<div class="grid3"><div><label class="f">Início</label><input type="time" id="as" value="09:00"></div><div><label class="f">Fim</label><input type="time" id="ae" value="15:00"></div></div><button class="btn" id="addslots">Liberar horário</button><div id="slist" style="margin-top:14px"></div></div>
+<div class="card" data-t="agd"><span class="tag">AGENDAMENTOS</span><div id="blist" style="margin-top:12px"></div></div>
+<div class="card" data-t="cli"><span class="tag">MINHAS CLIENTES</span>
+<label class="f" style="margin-top:12px">Mensagem de remarketing (você pode editar)</label><textarea id="tpl" rows="4"></textarea><div class="note">Use {nome}, {procedimento}, {dias} e {link}. Em cada cliente, toque em "Remarketing" ao lado do procedimento para abrir o WhatsApp com a mensagem pronta.</div>
+<div id="cl" class="sgrid" style="margin-top:18px;grid-template-columns:repeat(auto-fill,minmax(270px,1fr))"></div></div>
+<div class="card" data-t="pro"><span class="tag">NOVO PROCEDIMENTO</span><label class="f" style="margin-top:12px">Nome</label><input type="text" id="pn" placeholder="Ex.: Alongamento">
+<div class="grid3"><div><label class="f">Valor (R$)</label><input type="number" id="pv" step="0.01"></div><div><label class="f">Duração (min)</label><input type="number" id="pd" value="60" step="5"></div></div>
+<label class="f">Descrição</label><textarea id="pt" rows="3"></textarea><label class="f">Fotos (opcional, pode escolher várias)</label><input type="file" id="pf" accept="image/*" multiple><button class="btn" id="padd">+ Adicionar procedimento</button></div>
+<div class="card" data-t="pro"><span class="tag">PROCEDIMENTOS CADASTRADOS</span><div id="pl" style="margin-top:14px"></div></div>
+<div data-t="fat" id="fat" class="sgrid" style="gap:34px 16px;padding-top:22px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))"></div>
+<div class="card" data-t="cfg"><span class="tag">WHATSAPP</span><label class="f" style="margin-top:12px">Número que recebe os agendamentos e dúvidas</label><input type="tel" id="wn" placeholder="(21) 90000-0000"><div class="note">Com DDD.</div><button class="btn" id="wsave">Salvar</button><div id="wmsg" class="note"></div></div>
+</div><p style="text-align:center"><a href="#" style="color:var(--wine)">← Voltar ao site</a></p></main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+const SB_URL="https://zlbjdnlqsmmcbrhsknwt.supabase.co",SB_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpsYmpkbmxxc21tY2JyaHNrbnd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM3NDc0NjksImV4cCI6MjEwOTMyMzQ2OX0.n2Q8agvb7VgYT60NZA-jLYzk96HBuC6FlJRpqQvkCFc";
+
+const keep=()=>{try{return localStorage.getItem("ar_keep")!=="0"}catch(e){return true}};
+const store={getItem:k=>localStorage.getItem(k)??sessionStorage.getItem(k),setItem:(k,v)=>{(keep()?localStorage:sessionStorage).setItem(k,v);(keep()?sessionStorage:localStorage).removeItem(k)},removeItem:k=>{localStorage.removeItem(k);sessionStorage.removeItem(k)}};
+const sb=supabase.createClient(SB_URL,SB_KEY,{auth:{storage:store,persistSession:true,autoRefreshToken:true}});
+const $=i=>document.getElementById(i),brl=v=>"R$ "+Number(v).toFixed(2).replace(".",","),fd=d=>d.split("-").reverse().join("/"),dg=s=>s.replace(/\D/g,"");
+const fm=m=>{const h=Math.floor(m/60),r=m%60;return h?(r?h+"h"+String(r).padStart(2,"0"):h+"h"):r+" min"};
+const el=(t,x,c)=>{const e=document.createElement(t);if(x!=null)e.textContent=x;if(c)e.className=c;return e};
+const btn=(t,f)=>{const b=el("button",t,"btn s o");b.onclick=f;return b};
+const today=new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+let SV=[],SEL=new Set(),Q="",WHATS="",sel=null,tabCur="hor",V=[],ALL=[],FUT=[];
+$("date").min=today;
+/* ===== SITE ===== */
+function cards(){
+ const g=$("sgrid");g.innerHTML="";const q=Q.toLowerCase();
+ const list=SV.filter(s=>!q||(s.name+" "+(s.description||"")).toLowerCase().includes(q));$("nores").classList.toggle("hide",list.length>0);
+ list.forEach(s=>{const on=SEL.has(s.id),c=el("div",null,"sc"+(on?" on":"")),w=el("div",null,"gw"),gal=el("div",null,"gal");
+  (s.images||[]).forEach(u=>{const i=document.createElement("img");i.src=u;i.alt=s.name;i.loading="lazy";gal.appendChild(i)});
+  if(!gal.children.length)gal.appendChild(el("div","💅","ph"));w.appendChild(gal);
+  if((s.images||[]).length>1)[["‹","left:6px",-1],["›","right:6px",1]].forEach(([t,p,d])=>{const a=el("button",t,"ar");a.type="button";a.style.cssText=p;a.onclick=()=>gal.scrollBy({left:d*gal.clientWidth,behavior:"smooth"});w.appendChild(a)});
+  const b=el("div",null,"sb"),m=el("div",null,"meta");b.appendChild(el("h4",s.name));if(s.description)b.appendChild(el("div",s.description,"note"));
+  m.append(el("span","⏱ "+fm(s.duration_min),"dur"),el("span",brl(s.price),"price"));
+  const bt=el("button",on?"✓ Selecionado":"Selecionar","btn s"+(on?"":" o"));bt.style.marginTop="auto";bt.onclick=()=>{on?SEL.delete(s.id):SEL.add(s.id);cards();summary()};
+  b.append(m,bt);c.append(w,b);g.appendChild(c)})}
+$("q").oninput=e=>{Q=e.target.value.trim();cards()};
+const picked=()=>SV.filter(s=>SEL.has(s.id)),durOf=()=>picked().reduce((a,s)=>a+s.duration_min,0);
+function summary(){const p=picked();$("sum").textContent=p.length?p.map(s=>s.name).join(", "):"Escolha os procedimentos acima.";$("dur").textContent=fm(durOf());$("tot").textContent=brl(p.reduce((a,s)=>a+Number(s.price),0));loadSlots()}
+async function loadSlots(){
+ sel=null;const box=$("slots");box.innerHTML="";const d=$("date").value,dur=durOf(),note=t=>box.appendChild(el("span",t,"note"));
+ if(!dur)return note("Escolha os procedimentos para ver os horários.");if(!d)return note("Escolha uma data.");
+ const {data,error}=await sb.rpc("free_starts",{p_date:d,p_duration:dur});
+ if(error||!data||!data.length)return note("Não há horário livre nesta data para "+fm(dur)+" de atendimento. Tente outro dia.");
+ data.forEach(r=>{const b=el("button",r.slot_start.slice(0,5),"slot");b.type="button";b.onclick=()=>{sel=r.slot_start;box.querySelectorAll(".slot").forEach(x=>x.classList.remove("on"));b.classList.add("on")};box.appendChild(b)})}
+$("date").onchange=loadSlots;
+async function loadPub(){
+ const [s,c]=await Promise.all([sb.from("services").select("*").eq("active",true).order("sort_order").order("created_at"),sb.from("settings").select("whatsapp").eq("id",1).maybeSingle()]);
+ SV=s.data||[];WHATS=(c.data&&c.data.whatsapp)||"";cards();summary();
+ if(WHATS){$("wab").href="https://wa.me/"+WHATS+"?text="+encodeURIComponent("Olá! Tenho uma dúvida sobre os serviços do Studio Anna Rosa.");$("wab").classList.remove("hide")}}
+$("go").onclick=async()=>{
+ const sv=picked(),nome=$("nome").value.trim(),cel=$("cel").value.trim(),pg=(document.querySelector("input[name=pg]:checked")||{}).value,date=$("date").value;
+ const e=!sv.length?"Escolha ao menos um procedimento.":!date?"Escolha a data.":!sel?"Escolha o horário.":nome.length<2?"Informe seu nome.":dg(cel).length<10?"Informe um celular válido.":!pg?"Escolha a forma de pagamento.":"";
+ $("err").textContent=e;if(e)return;$("go").disabled=true;
+ const {error}=await sb.rpc("book_appointment",{p_date:date,p_start:sel,p_name:nome,p_phone:cel,p_payment:pg,p_services:sv.map(s=>s.name)});$("go").disabled=false;
+ if(error){$("err").textContent="Este horário não está mais disponível. Escolha outro.";loadSlots();return}
+ const total=sv.reduce((a,s)=>a+Number(s.price),0),names=sv.map(s=>s.name).join(", "),time=sel.slice(0,5);
+ const msg="Olá! Agendamento Studio Anna Rosa 💗%0AProcedimentos: "+encodeURIComponent(names)+"%0AData: "+fd(date)+" às "+time+" ("+encodeURIComponent(fm(durOf()))+")%0ATotal: "+encodeURIComponent(brl(total))+"%0APagamento: "+encodeURIComponent(pg)+"%0ANome: "+encodeURIComponent(nome)+"%0ACelular: "+encodeURIComponent(cel);
+ $("wa").href="https://wa.me/"+WHATS+"?text="+msg;$("wa").style.display=WHATS?"block":"none";
+ $("donemsg").textContent="Horário reservado: "+fd(date)+" às "+time+" — "+brl(total)+(WHATS?". Toque abaixo para avisar a profissional.":". A profissional entrará em contato.");
+ $("form").classList.add("hide");$("done").classList.remove("hide")};
+/* ===== ADMIN ===== */
+function route(){const a=location.hash==="#admin";$("pub").classList.toggle("hide",a);$("adm").classList.toggle("hide",!a);if(a)adminInit()}
+async function adminInit(){const {data:{session}}=await sb.auth.getSession();let ok=false;if(session){const r=await sb.from("admins").select("user_id").maybeSingle();ok=!!r.data;if(!ok)await sb.auth.signOut()}
+ $("login").classList.toggle("hide",ok);$("panel").classList.toggle("hide",!ok);if(ok){tab(tabCur);loadAdmin()}}
+const SVG='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',EO='<path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/>';
+$("eye").onclick=()=>{const h=$("lp").type==="password";$("lp").type=h?"text":"password";$("eye").innerHTML=SVG+EO+(h?'<path d="M3 3l18 18"/>':"")+"</svg>"};
+try{$("le").value=localStorage.getItem("ar_email")||"";$("lk").checked=keep()}catch(e){}
+$("lp").onkeydown=e=>{if(e.key==="Enter")$("lgo").click()};
+$("lgo").onclick=async()=>{try{localStorage.setItem("ar_keep",$("lk").checked?"1":"0");if($("lk").checked)localStorage.setItem("ar_email",$("le").value.trim());else localStorage.removeItem("ar_email")}catch(e){}
+ const {error}=await sb.auth.signInWithPassword({email:$("le").value.trim(),password:$("lp").value});
+ $("lerr").textContent=error?(error.message==="Invalid login credentials"?"E-mail ou senha incorretos.":"Erro: "+error.message):"";if(!error){await adminInit();if($("panel").classList.contains("hide"))$("lerr").textContent="Esta conta não tem permissão de administradora."}};
+$("out").onclick=async()=>{await sb.auth.signOut();adminInit()};
+function tab(t){tabCur=t;document.querySelectorAll("[data-t]").forEach(e=>e.classList.toggle("hide",e.dataset.t!==t));document.querySelectorAll("#tabs button[data-k]").forEach(b=>b.style.opacity=b.dataset.k===t?1:.55)}
+document.querySelectorAll("#tabs button[data-k]").forEach(b=>b.onclick=()=>tab(b.dataset.k));
+const list=(id,rows,empty)=>{const b=$(id);b.innerHTML="";if(!rows.length)b.appendChild(el("span",empty,"note"));rows.forEach(r=>b.appendChild(r))};
+const row=(txt,...bs)=>{const r=el("div",null,"row");r.append(el("span",txt),...bs);return r};
+async function loadAdmin(){
+ const [av,bk,cl,vi,sv,st]=await Promise.all([
+  sb.from("availability").select("*").gte("day",today).order("day").order("t_start"),
+  sb.from("bookings").select("*").order("booking_date",{ascending:false}).order("start_time").limit(80),
+  sb.from("clients").select("*"),
+  sb.from("visits").select("*,clients(name)").order("visit_date"),
+  sb.from("services").select("*").eq("active",true).order("sort_order").order("created_at"),
+  sb.from("settings").select("whatsapp").eq("id",1).maybeSingle()]);
+ SV=sv.data||[];ALL=vi.data||[];V=ALL.filter(v=>v.visit_date<=today);FUT=ALL.filter(v=>v.visit_date>today);WHATS=(st.data&&st.data.whatsapp)||"";if(document.activeElement!==$("wn"))$("wn").value=WHATS;
+ rAv(av.data||[]);rBook(bk.data||[]);rCli(cl.data||[]);rPro();rFat()}
+function rAv(d){list("slist",d.map(a=>row(fd(a.day)+" · "+a.t_start.slice(0,5)+" às "+a.t_end.slice(0,5),btn("Remover",async()=>{if(confirm("Remover esta janela de horário?")){await sb.from("availability").delete().eq("id",a.id);loadAdmin()}}))),"Nenhum horário liberado.")}
+$("addslots").onclick=async()=>{const d=$("ad").value,a=$("as").value,b=$("ae").value;if(!d||!a||!b||b<=a){alert("Confira a data e os horários.");return}await sb.from("availability").insert({day:d,t_start:a,t_end:b});loadAdmin()};
+const setSt=async(b,st)=>{await sb.from("bookings").update({status:st}).eq("id",b.id);loadAdmin()};
+const conclude=b=>setSt(b,"concluido");
+function endT(t,m){const x=+t.slice(0,2)*60+ +t.slice(3,5)+m;return String(Math.floor(x/60)%24).padStart(2,"0")+":"+String(x%60).padStart(2,"0")}
+function rBook(d){list("blist",d.map(b=>{const w=b.booking_date?fd(b.booking_date)+" "+b.start_time.slice(0,5)+"–"+endT(b.start_time,b.duration_min):"";const bs=[];
+ if(b.status==="pendente")bs.push(btn("Confirmar",()=>setSt(b,"confirmado")));
+ if(b.status==="pendente"||b.status==="confirmado")bs.push(btn("Concluir",()=>conclude(b)),btn("Cancelar",()=>confirm("Cancelar e liberar o horário?")&&setSt(b,"cancelado")));
+ return row(w+" · "+b.client_name+" · "+b.client_phone+" · "+b.services.join(", ")+" · "+brl(b.total)+" · "+b.payment_method+" · "+b.status.toUpperCase(),...bs)}),"Nenhum agendamento ainda.")}
+const DEFTPL="Olá, {nome}! 💗 Aqui é do Studio Anna Rosa. Já faz {dias} dias desde o seu {procedimento} e está na hora de renovar! Agende seu horário pelo link: {link}";
+try{$("tpl").value=localStorage.getItem("ar_tpl")||DEFTPL}catch(e){$("tpl").value=DEFTPL}
+$("tpl").oninput=()=>{try{localStorage.setItem("ar_tpl",$("tpl").value)}catch(e){}};
+const daysAgo=d=>Math.max(0,Math.round((new Date(today)-new Date(d))/864e5)),waLink=(ph,m)=>"https://wa.me/"+(ph.length<=11?"55"+ph:ph)+"?text="+encodeURIComponent(m);
+function remind(c,proc,last){const m=$("tpl").value.replace(/\{nome\}/g,c.name.split(" ")[0]).replace(/\{procedimento\}/g,proc.toLowerCase()).replace(/\{dias\}/g,daysAgo(last)).replace(/\{link\}/g,location.origin+location.pathname);window.open(waLink(c.phone,m),"_blank")}
+function rCli(cs){
+ const g={};cs.forEach(c=>g[c.phone]={phone:c.phone,name:c.name,n:0,tot:0,ps:{}});
+ ALL.forEach(v=>{const c=g[v.client_phone]||(g[v.client_phone]={phone:v.client_phone,name:(v.clients&&v.clients.name)||v.client_phone,n:0,tot:0,ps:{}});c.n++;c.tot+=+v.amount;v.services.forEach(x=>{const p=c.ps[x]||(c.ps[x]={n:0,last:""});p.n++;if(v.visit_date>p.last)p.last=v.visit_date})});
+ const arr=Object.values(g).sort((a,b)=>a.name.localeCompare(b.name)),box=$("cl");box.innerHTML="";if(!arr.length)box.appendChild(el("span","Nenhuma cliente registrada ainda.","note"));
+ arr.forEach(c=>{const b=el("div",null,"sc"),i=el("div",null,"sb");i.append(el("h4",c.name),el("div","📱 "+c.phone,"note"),el("div",c.n+" atendimento(s) · gastou "+brl(c.tot),"dur"));
+  const ps=Object.entries(c.ps).sort((a,b)=>b[1].last.localeCompare(a[1].last));if(!ps.length)i.appendChild(el("div","Ainda sem procedimentos.","note"));
+  ps.forEach(([n,p])=>{const fut=p.last>today,r=el("div",null,"row"),t=el("span",n+" ×"+p.n+(fut?" · agendado p/ "+fd(p.last):" · há "+daysAgo(p.last)+" dia(s)"));r.style.padding="6px 0";t.style.fontSize="13px";r.append(t);if(!fut)r.append(btn("Remarketing",()=>remind(c,n,p.last)));i.appendChild(r)});
+  const wb=btn("Chamar no WhatsApp",()=>window.open(waLink(c.phone,"Olá, "+c.name.split(" ")[0]+"! 💗"),"_blank"));wb.style.marginTop="auto";i.appendChild(wb);b.appendChild(i);box.appendChild(b)})}
+/* procedimentos */
+const inp=(t,v)=>{const i=document.createElement("input");i.type=t;i.value=v;if(t==="number")i.step="any";return i},fld=(l,n)=>{const w=el("div");w.append(el("label",l,"f"),n);return w};
+const shrink=f=>new Promise(r=>{const i=new Image();i.onload=()=>{const k=Math.min(1,1200/Math.max(i.width,i.height)),c=document.createElement("canvas");c.width=i.width*k;c.height=i.height*k;c.getContext("2d").drawImage(i,0,0,c.width,c.height);c.toBlob(b=>r(b),"image/jpeg",.82)};i.onerror=()=>r(null);i.src=URL.createObjectURL(f)});
+async function upImgs(s,files){const urls=[...(s.images||[])];for(const f of files){const b=await shrink(f);if(!b){alert("Imagem inválida: "+f.name);continue}
+ const path=s.id+"/"+Date.now()+Math.random().toString(36).slice(2,6)+".jpg",{error}=await sb.storage.from("services").upload(path,b,{contentType:"image/jpeg"});
+ if(error){alert("Erro no envio: "+error.message);continue}urls.push(sb.storage.from("services").getPublicUrl(path).data.publicUrl)}
+ await sb.from("services").update({images:urls}).eq("id",s.id);loadAdmin()}
+function rPro(){const box=$("pl");box.innerHTML="";if(!SV.length)box.appendChild(el("span","Nenhum procedimento.","note"));
+ SV.forEach(s=>{const e=el("div",null,"ed"),n=inp("text",s.name),p=inp("number",s.price),d=inp("number",s.duration_min),t=document.createElement("textarea");t.rows=3;t.value=s.description||"";
+  const g=el("div",null,"grid3");g.append(fld("Valor (R$)",p),fld("Duração (min)",d));e.append(fld("Nome",n),g,fld("Descrição",t));
+  const th=el("div",null,"thumbs");(s.images||[]).forEach(u=>{const w=el("div"),i=document.createElement("img");i.src=u;const x=el("button","×");x.onclick=async()=>{if(!confirm("Remover esta foto?"))return;await sb.from("services").update({images:s.images.filter(y=>y!==u)}).eq("id",s.id);const k=u.split("/services/")[1];if(k)sb.storage.from("services").remove([k]);loadAdmin()};w.append(i,x);th.appendChild(w)});
+  const f=document.createElement("input");f.type="file";f.accept="image/*";f.multiple=true;f.onchange=()=>f.files.length&&upImgs(s,[...f.files]);
+  const bs=el("div",null,"row");bs.append(btn("Salvar alterações",async()=>{const {error}=await sb.from("services").update({name:n.value.trim(),price:+p.value,duration_min:Math.max(5,Math.round(+d.value)),description:t.value.trim()}).eq("id",s.id);if(error)alert("Erro ao salvar.");else loadAdmin()}),btn("Remover procedimento",async()=>{if(confirm("Remover do site?")){await sb.from("services").update({active:false}).eq("id",s.id);loadAdmin()}}));
+  e.append(el("label","Fotos (pode enviar várias)","f"),th,f,bs);box.appendChild(e)})}
+$("padd").onclick=async()=>{const n=$("pn").value.trim(),v=+$("pv").value,d=Math.round(+$("pd").value);if(!n||!(v>=0)||!(d>=5)){alert("Preencha nome, valor e duração (mínimo 5 min).");return}
+ $("padd").disabled=true;const {data,error}=await sb.from("services").upsert({name:n,price:v,duration_min:d,description:$("pt").value.trim(),active:true,sort_order:Date.now()%1e9},{onConflict:"name"}).select().single();$("padd").disabled=false;
+ if(error){alert("Erro ao salvar: "+error.message);return}
+ const fs=[...$("pf").files];$("pn").value=$("pv").value=$("pt").value=$("pf").value="";if(fs.length)await upImgs(data,fs);else loadAdmin()};
+$("wsave").onclick=async()=>{let d=dg($("wn").value);if(d.length<10){$("wmsg").textContent="Número inválido.";return}if(d.length<=11)d="55"+d;const {error}=await sb.from("settings").update({whatsapp:d}).eq("id",1);$("wmsg").textContent=error?"Erro ao salvar.":"Salvo!"};
+function rFat(){
+ const host=$("fat");host.innerHTML="";const m=today.slice(0,7),sum=fn=>V.filter(fn).reduce((a,v)=>a+Number(v.amount),0),cnt=fn=>V.filter(fn).length,all=sum(()=>true);
+ const grp=(kf,vf)=>{const o={};V.forEach(v=>[].concat(kf(v)).forEach(k=>o[k]=(o[k]||0)+vf(v)));return Object.entries(o)};
+ const box=(t,...k)=>{const c=el("div",null,"card"),w=el("div");c.style.margin="0";w.style.marginTop="10px";w.append(...k);c.append(el("span",t,"tag"),w);host.appendChild(c)};
+ const big=(v,sub)=>{const d=el("div"),x=el("div",v);x.style.cssText='font:600 38px "Cormorant Garamond",Georgia,serif;color:var(--wine);text-align:center';d.append(x,el("div",sub,"note"));d.lastChild.style.textAlign="center";return d};
+ const line=(a,b)=>row(a,el("b",b)),none=()=>el("span","Sem dados ainda.","note");
+ box("HOJE",big(brl(sum(v=>v.visit_date===today)),cnt(v=>v.visit_date===today)+" atendimento(s)"));
+ box("ESTE MÊS",big(brl(sum(v=>v.visit_date.slice(0,7)===m)),cnt(v=>v.visit_date.slice(0,7)===m)+" atendimento(s)"));
+ box("TOTAL GERAL",big(brl(all),V.length+" atendimento(s)"));
+ box("TICKET MÉDIO",big(brl(V.length?all/V.length:0),"valor médio por atendimento"));
+ box("A RECEBER (AGENDADOS)",big(brl(FUT.reduce((a,v)=>a+Number(v.amount),0)),FUT.length+" agendamento(s) futuro(s)"));
+ const pm=grp(v=>v.visit_date.slice(0,7),v=>+v.amount).sort().reverse();box("POR MÊS",...(pm.length?pm.map(([k,v])=>line(k.split("-").reverse().join("/"),brl(v))):[none()]));
+ const pg=grp(v=>v.payment_method,v=>+v.amount).sort((a,b)=>b[1]-a[1]);box("FORMAS DE PAGAMENTO",...(pg.length?pg.map(([k,v])=>line(k,brl(v))):[none()]));
+ const pr=grp(v=>v.services,()=>1).sort((a,b)=>b[1]-a[1]);box("PROCEDIMENTOS MAIS FEITOS",...(pr.length?pr.map(([k,v])=>line(k,v+"×")):[none()]));
+ const dl=el("button","⬇ Baixar relatório completo","btn");dl.style.marginTop="4px";dl.onclick=csv;box("RELATÓRIO",el("div","Planilha com resumo, faturamento por mês, por pagamento, procedimentos e todos os atendimentos (abre no Excel).","note"),dl)}
+function csv(){
+ const n=v=>Number(v).toFixed(2).replace(".",","),m=today.slice(0,7),sum=fn=>V.filter(fn).reduce((a,v)=>a+Number(v.amount),0),all=sum(()=>true);
+ const grp=(kf,vf)=>{const o={};V.forEach(v=>[].concat(kf(v)).forEach(k=>o[k]=(o[k]||0)+vf(v)));return Object.entries(o)};
+ const L=[["RELATÓRIO DE FATURAMENTO - STUDIO ANNA ROSA"],["Gerado em",fd(today)],[],["RESUMO"],["Hoje",n(sum(v=>v.visit_date===today))],["Este mês",n(sum(v=>v.visit_date.slice(0,7)===m))],["Total geral",n(all)],["Atendimentos",V.length],["Ticket médio",n(V.length?all/V.length:0)],["A receber (agendados)",n(FUT.reduce((a,v)=>a+Number(v.amount),0))],[],
+ ["POR MÊS"],["Mês","Atendimentos","Faturamento"],...grp(v=>v.visit_date.slice(0,7),()=>1).sort().reverse().map(([k,c])=>[k.split("-").reverse().join("/"),c,n(sum(v=>v.visit_date.slice(0,7)===k))]),[],
+ ["POR FORMA DE PAGAMENTO"],["Forma","Faturamento"],...grp(v=>v.payment_method,v=>+v.amount).map(([k,v])=>[k,n(v)]),[],
+ ["PROCEDIMENTOS MAIS FEITOS"],["Procedimento","Quantidade"],...grp(v=>v.services,()=>1).sort((a,b)=>b[1]-a[1]),[],
+ ["ATENDIMENTOS"],["Data","Cliente","Celular","Procedimentos","Pagamento","Valor"],...[...V].reverse().map(v=>[fd(v.visit_date),(v.clients&&v.clients.name)||"",v.client_phone,v.services.join(" + "),v.payment_method,n(v.amount)])];
+ const t="\ufeff"+L.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(";")).join("\r\n"),a=document.createElement("a");
+ a.href=URL.createObjectURL(new Blob([t],{type:"text/csv;charset=utf-8"}));a.download="relatorio-faturamento-"+today+".csv";document.body.appendChild(a);a.click();a.remove()}
+window.addEventListener("hashchange",route);route();loadPub();
+</script></body></html>
